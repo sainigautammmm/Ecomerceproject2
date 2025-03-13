@@ -1,40 +1,39 @@
-// server.js
+
 const express = require("express");
 const connectDatabase = require("./database");
-const { productfetch } = require("./CONTROLER/product"); // Assuming this function adds a product
-const { getAllProducts } = require("./CONTROLER/productController"); // Ensure this path is correct
+const { productfetch } = require("./CONTROLER/product"); 
+const { getAllProducts } = require("./CONTROLER/productController"); 
 require("dotenv").config();
 const cors = require("cors");
 const { addtocart,  } = require("./CONTROLER/cart");
 
 const { registerUser, otpverification, loginuser, userAuthentication, logout } = require("./CONTROLER/user");
 const server = express();
-const PORT = process.env.PORT || 8000; // Default to 8000 if PORT isn't set
+const PORT = process.env.PORT || 8000; 
 const cookieParser = require('cookie-parser');
 const { showCart } = require("./CONTROLER/showcart");
 const { deleteCartItem } = require("./CONTROLER/deletecart");
 const { placeorder } = require("./CONTROLER/order");
-// const { profileuser } = require("./CONTROLER/profile");
-// const { getUserProfile, updateUserProfile } = require("./CONTROLER/profile");
+
 
 const {createOrUpdateUserProfile}= require("./CONTROLER/profile");
 
 
 
-// Connect to the database
+
 connectDatabase();
 server.use(cookieParser());
-// Middleware
+
 server.use(cors({
-  origin: "http://localhost:5173", // Your frontend URL
-  credentials: true, // Enable credentials for CORS
+  origin: "http://localhost:5173", 
+  credentials: true, 
 }));
 
-server.use(express.json()); // Parse JSON bodies
+server.use(express.json()); 
 
-// Routes
-server.post("/product", productfetch); // Route to create a product
-server.get("/api/products/all-products", getAllProducts); // Route to get all products
+
+server.post("/product", productfetch); 
+server.get("/api/products/all-products", getAllProducts); 
 server.post('/api/cart/addtocart', addtocart);
 server.get('/showcart',showCart);
 server.post("/register_user",registerUser);
@@ -47,13 +46,12 @@ server.post("/placeorder",placeorder);
 
 
 
-// server.get("/userprofile/:id",getUserProfile);
-// server.put("/userprofile/:id",updateUserProfile);
+
 server.post("/user/profile",createOrUpdateUserProfile);
 
 
 
-// Start the server
+
 server.listen(PORT, () => {
   console.log(`Backend Server is running at http://localhost:${PORT}/`);
 });

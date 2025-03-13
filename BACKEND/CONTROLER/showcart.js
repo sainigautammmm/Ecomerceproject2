@@ -2,7 +2,7 @@ const Cart = require("../MODEL/cart");
 
 const showCart = async (req, res) => {
     try {
-        // Fetch all items in the cart
+        
         const cartItems = await Cart.find();
 
         if (cartItems.length === 0) {
@@ -13,7 +13,7 @@ const showCart = async (req, res) => {
             });
         }
 
-        // Send the cart items as a response
+        
         return res.status(200).json({
             success: true,
             message: "Cart items retrieved successfully",

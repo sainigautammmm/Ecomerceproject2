@@ -2,7 +2,7 @@ const { default: mongoose } = require("mongoose");
 const cart =  require("../MODEL/cart")
 const deleteCartItem = async (req, res) => {
     try {
-        const { productid } = req.params; // Assuming productid is passed as a route parameter
+        const { productid } = req.params; 
 
         if (!productid) {
             return res.status(400).json({

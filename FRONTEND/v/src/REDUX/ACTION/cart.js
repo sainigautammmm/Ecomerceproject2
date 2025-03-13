@@ -1,36 +1,8 @@
-// actions/cart.js
+
 import axios from "axios";
 import { ADD_TO_CART_REQUEST, ADD_TO_CART_SUCCESS, ADD_TO_CART_FAILURE , FETCH_CART_REQUEST, FETCH_CART_SUCCESS, FETCH_CART_FAILURE, DELETE_CART_REQUEST, DELETE_CART_SUCCESS, DELETE_CART_FAILURE} from "../Constant/constants";
 
-// export const addtocartaction = (productId, productquantity, productprice,) => async (dispatch) => {
-//   dispatch({ type: ADD_TO_CART_REQUEST });
 
-//   try {
-//     const response = await axios.post("http://localhost:8000/api/cart/addtocart", {
-//       productid: productId,
-//       productquantity: productquantity,
-//       productprice: productprice,
-     
-     
-     
-//     });
-//     console.log(response);
-  
-//     if (response.data.success) {
-//       dispatch({
-//         type: ADD_TO_CART_SUCCESS,
-//         payload: response.data.cartitem,
-//       });
-//     } else {
-//       throw new Error("Unexpected response format");
-//     }
-//   } catch (error) {
-//     console.error("Error details:", error);
-//     const message = error.response?.data?.message || "An error occurred while adding to cart.";
-//     dispatch({ type: ADD_TO_CART_FAILURE, payload: message });
-//   }
-  
-// };
 
 export const addtocartaction = (productId, productquantity, productprice, productthumbnail,productrating,productcategory) => async (dispatch) => {
   dispatch({ type: ADD_TO_CART_REQUEST });

@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import {  useDispatch, useSelector } from 'react-redux';
-import { saveUserProfile } from '../REDUX/ACTION/userProfile';
+import { saveUserProfile } from '../REDUX/ACTION/userprofile';
+
 
 const Userprofile = () => {
   const dispatch = useDispatch();
@@ -43,151 +44,7 @@ const Userprofile = () => {
          }
        };
   return (
-    // <div className="container mt-5">
-    //   <h2 className="text-center mb-4">User Profile</h2>
-    //   <form onSubmit={handleSubmit}>
-    //   <div className="row mb-3">
-    //           <div className="col-md-6">
-    //             <label className="form-label" htmlFor="profilePicture">
-    //               Profile Picture
-    //             </label>
-    //             <input
-    //               type="file"
-    //               id="profilePicture"
-    //               className="form-control"
-    //               onChange={handleImageUpload}
-    //             />
-    //           </div>
-    //           <div className="col-md-6 text-center">
-    //             {formData.profilePicture && (
-    //               <img
-    //                 src={formData.profilePicture}
-    //                 alt="Profile Preview"
-    //                 className="img-thumbnail"
-    //                 width="150"
-    //                 height="150"
-    //               />
-    //             )}
-    //           </div>
-    //          </div>
-
-    //     <div className="row">
-    //       <div className="col-md-6 mb-3">
-    //         <input
-    //           type="text"
-    //           className="form-control"
-    //           name="username"
-    //           placeholder="Username"
-    //           value={formData.username}
-    //           onChange={handleChange}
-    //           required
-    //         />
-    //       </div>
-    //       <div className="col-md-6 mb-3">
-    //         <input
-    //           type="email"
-    //           className="form-control"
-    //           name="email"
-    //           placeholder="Email"
-    //           value={formData.email}
-    //           onChange={handleChange}
-    //           required
-    //         />
-    //       </div>
-    //     </div>
-    //     <div className="row">
-    //       <div className="col-md-6 mb-3">
-    //         <input
-    //           type="tel"
-    //           className="form-control"
-    //           name="mobileno"
-    //           placeholder="Mobile Number"
-    //           value={formData.mobileno}
-    //           onChange={handleChange}
-    //           required
-    //         />
-    //       </div>
-    //     </div>
-    //     <h4 className="mt-4 mb-3">Address</h4>
-    //     <div className="row">
-    //       <div className="col-md-6 mb-3">
-    //         <input
-    //           type="text"
-    //           className="form-control"
-    //           name="address.street"
-    //           placeholder="Street"
-    //           value={formData.address.street}
-    //           onChange={handleChange}
-    //           required
-    //         />
-    //       </div>
-    //       <div className="col-md-6 mb-3">
-    //         <input
-    //           type="text"
-    //           className="form-control"
-    //           name="address.city"
-    //           placeholder="City"
-    //           value={formData.address.city}
-    //           onChange={handleChange}
-    //           required
-    //         />
-    //       </div>
-    //     </div>
-    //     <div className="row">
-    //       <div className="col-md-6 mb-3">
-    //         <input
-    //           type="text"
-    //           className="form-control"
-    //           name="address.state"
-    //           placeholder="State"
-    //           value={formData.address.state}
-    //           onChange={handleChange}
-    //           required
-    //         />
-    //       </div>
-    //       <div className="col-md-6 mb-3">
-    //         <input
-    //           type="text"
-    //           className="form-control"
-    //           name="address.pincode"
-    //           placeholder="Pincode"
-    //           value={formData.address.pincode}
-    //           onChange={handleChange}
-    //           required
-    //         />
-    //       </div>   
-    //       {/* <div className="row mb-3">
-    //           <div className="col-md-6">
-    //             <label className="form-label" htmlFor="profilePicture">
-    //               Profile Picture
-    //             </label>
-    //             <input
-    //               type="file"
-    //               id="profilePicture"
-    //               className="form-control"
-    //               onChange={handleImageUpload}
-    //             />
-    //           </div>
-    //           <div className="col-md-6 text-center">
-    //             {formData.profilePicture && (
-    //               <img
-    //                 src={formData.profilePicture}
-    //                 alt="Profile Preview"
-    //                 className="img-thumbnail"
-    //                 width="150"
-    //                 height="150"
-    //               />
-    //             )}
-    //           </div>
-    //          </div> */}
-    //     </div>
-    //     <button type="submit" className="btn btn-primary" disabled={loading}>
-    //       {loading ? "Saving Profile..." : "Save Profile"}
-    //     </button>
-    //   </form>
-    //   {error && <div className="alert alert-danger mt-3">Error: {error}</div>}
-    //   {success && <div className="alert alert-success mt-3">Profile saved successfully!</div>}
-    // </div>
+   
     <div className="container mt-5 p-5">
   <div className="card shadow-lg">
     <div className="card-header bg-primary text-white text-center">
